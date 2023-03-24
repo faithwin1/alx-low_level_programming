@@ -1,15 +1,16 @@
-#include “main.h”
+#include "main.h"
 
 /**
- * _isdigit - checks for digithood
- * @c: character to checked for digit membership
+ * _isdigit - check if numbers are 0 - 9
+ * @c: char to be checked
  *
- * Return: 1 if digit, 0 if not digit
+ * Return: 0 or 1
  */
 
 int _isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
-	return (0);
+	else
+		return (0);
 }
