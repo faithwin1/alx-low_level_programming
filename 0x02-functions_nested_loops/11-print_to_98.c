@@ -1,32 +1,47 @@
-# include    “main.h”
-#include   <unistd.h>
+#include "main.h"
+#include <stdio.h>
 
 /**
- * print_to_98 - prints numbers to 98
- * @n: starting integer
+ * print_to_98 - Prints all natural numbers from n to 98
  *
- * Description: prints all natural number from n - 98
+ * @n: The number to start printing from
  *
- * Return: void
+ * Return: Always 0.
  */
 
-void print_to_98(int n)
+ void print_to_98(int n)
 {
-	if (n < 98)
+
+	if (n <= 98)
 	{
-		while (n < 98)
-		{
-			printf("%d, ", n);
-			n++;
-		}
-	}
-	else if (n > 98)
+	for (; n <= 98; n++)
 	{
-		while (n > 98)
-		{
-			printf("%d, ", n);
-			n--;
-		}
+	if (n == 98)
+        {
+        printf("%d", n);
+	printf("\n");
+	break;
 	}
-	printf("98\n");
+	else
+	{
+	printf("%d, ", n);
+	}
+	}
+	}
+	else
+	{
+	for (; n >= 98; n--)
+	{
+	if (n == 98)
+	{
+	printf("%d", n);
+	printf("\n");
+	break;
+	}
+	else
+	{
+	printf("%d, ", n)
+	}
+	}
+	}
 }
